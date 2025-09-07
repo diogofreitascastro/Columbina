@@ -1,0 +1,366 @@
+/* IMPORTS */
+@import "variables-and-mixins";
+@import "rwd-queries";
+
+/* FONTFACE */
+@font-face {
+    font-family: HYWenHei Extended;
+    src: url('../HYWenHei Extended.ttf');
+}
+
+/* RESETS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* GENERAL STUFF */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'HYWenHei Extended';
+    color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    font-family: 'HYWenHei Extended';
+    font-weight: 700;
+}
+
+a,
+i,
+p {
+    margin: 0;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+body {
+    background: $bg-color;
+}
+
+a,
+a:link,
+a:visited {
+    color: $text-color;
+}
+
+/* MY CSS */
+
+header {
+    min-height: 30vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(rgba($bg-color, 0) 60%, $bg-color), url("../images/Columbina_countdown_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include mediumScreen {
+        min-height: 100vh;
+    }
+
+    h1 {
+        font-size: 3vw;
+        margin-bottom: 0.5em;
+
+        @include largeScreen {
+            font-size: 2vw;
+        }
+    }
+
+    h2 {
+        font-size: 6vw;
+        @include largeScreen {
+            font-size: 4vw;
+        }
+    }
+}
+
+main {
+    margin: 30px auto;
+    padding: 0 20px;
+    max-width: 500px;
+
+    @include mediumScreen {
+        max-width: 1200px;
+        padding: 0 50px;
+        margin: 30px auto;
+    }
+
+    @include largeScreen {}
+
+    h1 {
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    p.obs {
+        font-size: 12px;
+        opacity: 0.5;
+        margin-bottom: 30px;
+    }
+
+    .prefarm-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+
+        @include mediumScreen {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 60px;
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .character-materials-wrapper,
+        .signature-materials-wrapper {
+
+            .item-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                
+                img {
+                    max-height: 150px;
+
+                    @include largeScreen {
+                        max-height: 200px;
+                    }
+                }      
+            }
+            .materials-wrapper {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+
+                @include mediumScreen {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+
+                .individual-material {
+                    height: 80px;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: column;
+
+                    @include largeScreen {
+                        height: 100px;
+                    }
+
+                    &.gold {
+                        background-image: linear-gradient(160deg, $gold-dark, $gold-light);
+                    }
+
+                    &.purple {
+                        background-image: linear-gradient(160deg, $purple-dark, $purple-light);
+                    }
+
+                    &.blue {
+                        background-image: linear-gradient(160deg, $blue-dark, $blue-light);
+                    }
+
+                    &.green {
+                        background-image: linear-gradient(160deg, $green-dark, $green-light);
+                    }
+
+                    &.grey {
+                        background-image: linear-gradient(160deg, $grey-dark, $grey-light);
+                    }
+
+                    .material-image {
+                        flex-grow: 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            max-height: 50px;
+                            max-width: 50px;
+                            width: auto;
+
+                            @include largeScreen {
+                                max-height: 60px;
+                                max-width: 60px;
+                            }
+                        }
+                    }
+
+                    .material-qty {
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(black, 0.5);
+
+                        @include largeScreen {
+                            height: 25px;
+                        }
+
+                        p {
+                            text-align: center;
+                            font-size: 12px;
+
+                            @include largeScreen {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
