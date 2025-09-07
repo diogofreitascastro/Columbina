@@ -1,16 +1,18 @@
 header {
-    audio {
+    .audio-wrapper {
         @include onlyMobile {
             display: none;
         }
 
-        margin-top: 10em;
-        background-color: #f9eee1;
-        filter: invert(1);
-        border-radius: 100px;
-
-        &::-webkit-media-controls-panel {
+        audio {
+            margin-top: 10em;
             background-color: #f9eee1;
+            filter: invert(1);
+            border-radius: 100px;
+
+            &::-webkit-media-controls-panel {
+                background-color: #f9eee1;
+            }
         }
     }
 }

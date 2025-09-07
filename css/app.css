@@ -1,4 +1,10 @@
 /* IMPORTS */
+/* QUERIES */
+/*edited*/
+/* New iPhones viewport
+*/
+/*  Non mobile first for specific scenarios where elements shouldn't be displayed on mobile */
+/*  Mobile Visibility classes */
 /* VARIABLES */
 /* RESETS */
 /* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain)
@@ -33,12 +39,10 @@ body { background: #06111E; }
 
 a, a:link, a:visited { color: #f1f1f1; }
 
-/* QUERIES */
-/*edited*/
-/* New iPhones viewport
-*/
-/*  Non mobile first for specific scenarios where elements shouldn't be displayed on mobile */
-/*  Mobile Visibility classes */
+@media (max-width: 575px) { header .audio-wrapper { display: none; } }
+header .audio-wrapper audio { margin-top: 10em; background-color: #f9eee1; filter: invert(1); border-radius: 100px; }
+header .audio-wrapper audio::-webkit-media-controls-panel { background-color: #f9eee1; }
+
 .ca3-scroll-down-arrow { background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=); background-size: contain; background-repeat: no-repeat; }
 @media (max-width: 575px) { .ca3-scroll-down-arrow { display: none; } }
 
@@ -60,10 +64,6 @@ a, a:link, a:visited { color: #f1f1f1; }
 @keyframes ca3_fade_move_down { 0% { transform: translateY(-20px); opacity: 0; }
   50% { opacity: 1; }
   100% { transform: translateY(20px); opacity: 0; } }
-header audio { margin-top: 10em; background-color: #f9eee1; filter: invert(1); border-radius: 100px; }
-@media (max-width: 575px) { header audio { display: none; } }
-header audio::-webkit-media-controls-panel { background-color: #f9eee1; }
-
 /* FONTFACE */
 @font-face { font-family: HYWenHei Extended; src: url("../HYWenHei Extended.ttf"); }
 /* MY CSS */
