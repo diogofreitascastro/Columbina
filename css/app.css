@@ -7,8 +7,15 @@
 /*  Non mobile first for specific scenarios where elements shouldn't be displayed on mobile */
 /*  Mobile Visibility classes */
 .ca3-scroll-down-arrow { background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=); background-size: contain; background-repeat: no-repeat; }
+@media (max-width: 575px) { .ca3-scroll-down-arrow { display: none; } }
 
 .ca3-scroll-down-link { cursor: auto; height: 30px; width: 30px; line-height: 60px; position: absolute; transform: translateX(-50%); bottom: 20px; color: #FFF; text-align: center; font-size: 70px; z-index: 100; text-decoration: none; margin-left: auto; margin-right: auto; left: 0; right: 0; -webkit-animation: ca3_fade_move_down 2s ease-in-out infinite; -moz-animation: ca3_fade_move_down 2s ease-in-out infinite; animation: ca3_fade_move_down 2s ease-in-out infinite; }
+
+/* hide + stop the floating animation */
+.ca3-scroll-down-link.arrow-hidden { -webkit-animation: none !important; -moz-animation: none !important; animation: none !important; opacity: 0 !important; pointer-events: none; transition: opacity 0.35s ease; }
+
+/* optional: make sure re-showing brings back the animation */
+.ca3-scroll-down-link.arrow-visible { -webkit-animation: ca3_fade_move_down 2s ease-in-out infinite; -moz-animation: ca3_fade_move_down 2s ease-in-out infinite; animation: ca3_fade_move_down 2s ease-in-out infinite; opacity: 1; pointer-events: auto; transition: opacity 0.35s ease; }
 
 /*animated scroll arrow animation*/
 @-webkit-keyframes ca3_fade_move_down { 0% { -webkit-transform: translateY(-20px); opacity: 0; }
@@ -89,5 +96,17 @@ main .prefarm-wrapper .character-materials-wrapper .materials-wrapper .individua
 @media (min-width: 992px) { main .prefarm-wrapper .character-materials-wrapper .materials-wrapper .individual-material .material-qty, main .prefarm-wrapper .signature-materials-wrapper .materials-wrapper .individual-material .material-qty { height: 25px; } }
 main .prefarm-wrapper .character-materials-wrapper .materials-wrapper .individual-material .material-qty p, main .prefarm-wrapper .signature-materials-wrapper .materials-wrapper .individual-material .material-qty p { text-align: center; font-size: 12px; }
 @media (min-width: 992px) { main .prefarm-wrapper .character-materials-wrapper .materials-wrapper .individual-material .material-qty p, main .prefarm-wrapper .signature-materials-wrapper .materials-wrapper .individual-material .material-qty p { font-size: 14px; } }
+
+footer .inner-footer { display: flex; align-items: center; justify-content: space-between; padding: 0 50px; z-index: 2; background: #040b13; min-height: 60px; font-size: .8rem; }
+@media (max-width: 575px) { footer .inner-footer { padding: 15px 30px; flex-direction: column; } }
+@media (min-width: 768px) { footer .inner-footer { font-size: .9rem; } }
+@media (min-width: 992px) { footer .inner-footer { padding: 0 80px; } }
+@media (max-width: 575px) { footer .inner-footer .signature-wrap { margin-bottom: 15px; } }
+footer .inner-footer .signature-wrap #signature { opacity: .2; text-align: center; }
+@media (min-width: 768px) { footer .inner-footer .signature-wrap #signature { text-align: left; } }
+footer .inner-footer .other-links { display: flex; flex-direction: row; grid-gap: 20px; }
+@media (min-width: 768px) { footer .inner-footer .other-links { grid-gap: 30px; } }
+footer .inner-footer .other-links a img { height: 30px; opacity: .2; transition: ease .2s; }
+footer .inner-footer .other-links a img:hover { opacity: 1; }
 
 /*# sourceMappingURL=app.css.map */

@@ -27,4 +27,41 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+(function () {
+  const arrow = document.querySelector('.ca3-scroll-down-link');
+  if (!arrow) return;
+
+  // Make sure it starts with the visible class (safe if you didn't add it)
+  arrow.classList.add('arrow-visible');
+
+  const threshold = 50; // px scrolled before hiding - adjust as needed
+  let ticking = false;
+
+  function update() {
+    const y = window.scrollY || window.pageYOffset;
+    if (y > threshold) {
+      if (!arrow.classList.contains('arrow-hidden')) {
+        arrow.classList.add('arrow-hidden');
+        arrow.classList.remove('arrow-visible');
+      }
+    } else {
+      if (arrow.classList.contains('arrow-hidden')) {
+        arrow.classList.remove('arrow-hidden');
+        arrow.classList.add('arrow-visible');
+      }
+    }
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
 });
