@@ -395,13 +395,25 @@ footer {
         }
 
         .signature-wrap {
+            display: flex;
+            flex-flow: column;
+            grid-gap: 5px;
+
             @include onlyMobile {
                 margin-bottom: 15px;
             }
 
-            #signature {
+            #signature,
+            #donate {
                 opacity: .2;
                 text-align: center;
+
+                a,
+                a:link,
+                a:visited,
+                a:hover {
+                    text-decoration: none;
+                }
 
                 @include mediumScreen {
                     text-align: left;

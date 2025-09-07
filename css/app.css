@@ -101,9 +101,11 @@ footer .inner-footer { display: flex; align-items: center; justify-content: spac
 @media (max-width: 575px) { footer .inner-footer { padding: 15px 30px; flex-direction: column; } }
 @media (min-width: 768px) { footer .inner-footer { font-size: .9rem; } }
 @media (min-width: 992px) { footer .inner-footer { padding: 0 80px; } }
+footer .inner-footer .signature-wrap { display: flex; flex-flow: column; grid-gap: 5px; }
 @media (max-width: 575px) { footer .inner-footer .signature-wrap { margin-bottom: 15px; } }
-footer .inner-footer .signature-wrap #signature { opacity: .2; text-align: center; }
-@media (min-width: 768px) { footer .inner-footer .signature-wrap #signature { text-align: left; } }
+footer .inner-footer .signature-wrap #signature, footer .inner-footer .signature-wrap #donate { opacity: .2; text-align: center; }
+footer .inner-footer .signature-wrap #signature a, footer .inner-footer .signature-wrap #signature a:link, footer .inner-footer .signature-wrap #signature a:visited, footer .inner-footer .signature-wrap #signature a:hover, footer .inner-footer .signature-wrap #donate a, footer .inner-footer .signature-wrap #donate a:link, footer .inner-footer .signature-wrap #donate a:visited, footer .inner-footer .signature-wrap #donate a:hover { text-decoration: none; }
+@media (min-width: 768px) { footer .inner-footer .signature-wrap #signature, footer .inner-footer .signature-wrap #donate { text-align: left; } }
 footer .inner-footer .other-links { display: flex; flex-direction: row; grid-gap: 20px; }
 @media (min-width: 768px) { footer .inner-footer .other-links { grid-gap: 30px; } }
 footer .inner-footer .other-links a img { height: 30px; opacity: .2; transition: ease .2s; }
