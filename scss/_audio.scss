@@ -1,7 +1,9 @@
 header {
     .audio-wrapper {
-        @include onlyMobile {
-            display: none;
+        display: none;
+
+        @include mediumScreen {
+            display: inline-block;
         }
 
         audio {

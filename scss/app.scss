@@ -30,28 +30,37 @@ header {
     }
 
     h1 {
-        font-size: 3vw;
+        font-size: 1em;
         margin-bottom: 0.5em;
 
+        @include mediumScreen {
+            font-size: 1.5em;
+        }
         @include largeScreen {
-            font-size: 2vw;
+            font-size: 2.5em;
         }
     }
 
     h2 {
-        font-size: 6vw;
+        font-size: 2em;
 
+        @include mediumScreen {
+            font-size: 3em;
+        }
         @include largeScreen {
-            font-size: 4vw;
+            font-size: 5em;
         }
     }
 
     h3 {
-        font-size: 2vw;
+        font-size: .5em;
         margin-top: 0.8em;
 
+        @include mediumScreen {
+            font-size: .8em;
+        }
         @include largeScreen {
-            font-size: 1vw;
+            font-size: 1.2em;
         }
     }
 }
