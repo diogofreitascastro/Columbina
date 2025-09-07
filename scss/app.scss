@@ -124,7 +124,7 @@ main {
 
                 .individual-material {
                     height: 80px;
-                    border-radius: 5px;
+                    border-radius: 10px;
                     display: flex;
                     flex-flow: column;
 
@@ -172,6 +172,7 @@ main {
 
                     .material-qty {
                         height: 20px;
+                        border-radius: 0 0 10px 10px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -235,6 +236,11 @@ footer {
             #donate {
                 opacity: .2;
                 text-align: center;
+                transition: ease .2s;
+
+                &:hover {
+                    opacity: 1;
+                }
 
                 a,
                 a:link,
