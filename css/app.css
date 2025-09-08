@@ -90,6 +90,7 @@ main .prefarm-wrapper h2 { text-align: left; margin-bottom: 30px; }
 main .prefarm-wrapper .character-materials-wrapper .item-image, main .prefarm-wrapper .signature-materials-wrapper .item-image { display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
 main .prefarm-wrapper .character-materials-wrapper .item-image img, main .prefarm-wrapper .signature-materials-wrapper .item-image img { max-height: 150px; }
 @media (min-width: 992px) { main .prefarm-wrapper .character-materials-wrapper .item-image img, main .prefarm-wrapper .signature-materials-wrapper .item-image img { max-height: 200px; } }
+main .prefarm-wrapper .character-materials-wrapper p#signature-description, main .prefarm-wrapper .signature-materials-wrapper p#signature-description { margin-bottom: 30px; font-size: 0.8em; line-height: 1.2em; }
 main .prefarm-wrapper .character-materials-wrapper .materials-wrapper, main .prefarm-wrapper .signature-materials-wrapper .materials-wrapper { display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 10px; }
 @media (min-width: 768px) { main .prefarm-wrapper .character-materials-wrapper .materials-wrapper, main .prefarm-wrapper .signature-materials-wrapper .materials-wrapper { grid-template-columns: repeat(5, 1fr); } }
 main .prefarm-wrapper .character-materials-wrapper .materials-wrapper .individual-material, main .prefarm-wrapper .signature-materials-wrapper .materials-wrapper .individual-material { height: 80px; border-radius: 10px; display: flex; flex-flow: column; }

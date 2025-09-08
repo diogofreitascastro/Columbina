@@ -123,6 +123,12 @@ main {
                 }
             }
 
+            p#signature-description {
+                margin-bottom: 30px;
+                font-size: 0.8em;
+                line-height: 1.2em;
+            }
+
             .materials-wrapper {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
