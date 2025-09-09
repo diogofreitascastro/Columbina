@@ -133,7 +133,6 @@ main p.obs { font-size: 12px; opacity: 0.5; }
 
 footer .inner-footer { display: flex; align-items: center; justify-content: space-between; padding: 0 50px; z-index: 2; background: #040b13; min-height: 60px; font-size: .8rem; }
 @media (max-width: 575px) { footer .inner-footer { padding: 15px 30px; flex-direction: column; } }
-@media (min-width: 768px) { footer .inner-footer { font-size: .9rem; } }
 @media (min-width: 992px) { footer .inner-footer { padding: 0 80px; } }
 footer .inner-footer .signature-wrap { display: flex; flex-flow: column; grid-gap: 5px; }
 @media (max-width: 575px) { footer .inner-footer .signature-wrap { margin-bottom: 15px; } }

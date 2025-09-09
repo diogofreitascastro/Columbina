@@ -114,10 +114,6 @@ footer {
             flex-direction: column;
         }
 
-        @include mediumScreen {
-            font-size: .9rem;
-        }
-
         @include largeScreen {
             padding: 0 80px;
         }
