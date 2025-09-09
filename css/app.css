@@ -112,7 +112,7 @@ header .audio-wrapper audio::-webkit-media-controls-panel { background-color: #f
 /* FONTFACE */
 @font-face { font-family: HYWenHei Extended; src: url("../HYWenHei Extended.ttf"); }
 /* MY CSS */
-* { line-height: 1.2em; }
+p { line-height: 1.3em; }
 
 header { min-height: 30vh; display: flex; flex-flow: column; justify-content: center; align-items: center; background-image: linear-gradient(rgba(6, 17, 30, 0) 60%, #06111E), url("../images/Columbina_countdown_bg.png"); background-size: cover; background-repeat: no-repeat; background-position: center; }
 @media (min-width: 768px) { header { min-height: 100vh; } }
