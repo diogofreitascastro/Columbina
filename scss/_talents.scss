@@ -89,6 +89,7 @@
 
     .passives-sub-wrapper,
     .constellations-sub-wrapper {
+        display: flex;
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: "title"
             "description";
