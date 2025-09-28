@@ -57,23 +57,23 @@
                 }
 
                 &.gold {
-                    background-image: linear-gradient(160deg, $gold-dark, $gold-light);
+                    background-image: linear-gradient(160deg, $gold-dark, $gold-light 75%);
                 }
 
                 &.purple {
-                    background-image: linear-gradient(160deg, $purple-dark, $purple-light);
+                    background-image: linear-gradient(160deg, $purple-dark, $purple-light 75%);
                 }
 
                 &.blue {
-                    background-image: linear-gradient(160deg, $blue-dark, $blue-light);
+                    background-image: linear-gradient(160deg, $blue-dark, $blue-light 75%);
                 }
 
                 &.green {
-                    background-image: linear-gradient(160deg, $green-dark, $green-light);
+                    background-image: linear-gradient(160deg, $green-dark, $green-light 75%);
                 }
 
                 &.grey {
-                    background-image: linear-gradient(160deg, $grey-dark, $grey-light);
+                    background-image: linear-gradient(160deg, $grey-dark, $grey-light 75%);
                 }
 
                 .material-image {
