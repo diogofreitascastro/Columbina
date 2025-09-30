@@ -1,0 +1,29 @@
+.drip-wrapper {
+    grid-gap: 30px;
+    margin: 20px 0 30px;
+
+    @include mediumScreen {
+        grid-gap: 60px;
+    }
+
+    h2 {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .drip-images {
+        display: /*grid*/none;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+
+        @include mediumScreen {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 60px;
+        }
+
+        >* {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

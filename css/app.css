@@ -65,6 +65,13 @@ header .audio-wrapper audio::-webkit-media-controls-panel { background-color: #f
 @keyframes ca3_fade_move_down { 0% { transform: translateY(-20px); opacity: 0; }
   50% { opacity: 1; }
   100% { transform: translateY(20px); opacity: 0; } }
+.drip-wrapper { grid-gap: 30px; margin: 20px 0 30px; }
+@media (min-width: 768px) { .drip-wrapper { grid-gap: 60px; } }
+.drip-wrapper h2 { text-align: left; margin-bottom: 30px; }
+.drip-wrapper .drip-images { display: none; grid-template-columns: repeat(1, 1fr); grid-gap: 10px; }
+@media (min-width: 768px) { .drip-wrapper .drip-images { grid-template-columns: repeat(3, 1fr); grid-gap: 60px; } }
+.drip-wrapper .drip-images > * { display: flex; justify-content: center; }
+
 .prefarm-wrapper { display: grid; grid-template-columns: repeat(1, 1fr); grid-gap: 30px; margin: 20px 0 30px; }
 @media (min-width: 768px) { .prefarm-wrapper { grid-template-columns: repeat(2, 1fr); grid-gap: 60px; } }
 .prefarm-wrapper h2 { text-align: left; margin-bottom: 30px; }
