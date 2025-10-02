@@ -1,6 +1,7 @@
 /* VARIABLES */
 
 $bg-color: #06111E;
+$bg-color-lighter: transparentize(desaturate(lighten($bg-color, 10%), 30%), 0.2);
 $text-color: #f1f1f1;
 
 $gold-dark: #4C3F43;

@@ -8,13 +8,13 @@
     .talent-sub-wrapper,
     .passives-sub-wrapper,
     .constellations-sub-wrapper {
-        background-color: transparentize(desaturate(lighten($bg-color, 10%), 30%), 0.2);
+        background-color: $bg-color-lighter;
         border-radius: 10px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "title title"
-            "description description"
-            "details details";
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "title"
+            "description"
+            "details";
         grid-gap: 20px;
         flex-flow: column;
         padding: 20px;
