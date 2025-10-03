@@ -79,6 +79,7 @@ header .audio-wrapper audio::-webkit-media-controls-panel { background-color: #f
 .ascension-wrapper .namecard { grid-area: namecard; display: flex; justify-content: center; }
 .ascension-wrapper .namecard img { max-width: 50%; height: auto; border-radius: 5px; }
 .ascension-wrapper .base-stats-wrapper { grid-area: stats; }
+@media (min-width: 768px) { .ascension-wrapper .base-stats-wrapper { margin: 0 auto; width: 400px; } }
 .ascension-wrapper .base-stats-wrapper h2 { margin-bottom: 10px; }
 .ascension-wrapper .base-stats-wrapper .base-stat-single { border-radius: 5px; display: flex; flex-flow: row; justify-content: space-between; background-color: rgba(28, 42, 59, 0.8); padding: 10px; margin-bottom: 5px; }
 .ascension-wrapper .base-stats-wrapper .base-stat-single:last-child { margin-bottom: 0; }

@@ -41,6 +41,11 @@
     .base-stats-wrapper {
         grid-area: stats;
 
+        @include mediumScreen {
+            margin: 0 auto;
+            width: 400px;
+        }
+
         h2 {
             margin-bottom: 10px;
         }
