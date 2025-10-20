@@ -14,7 +14,8 @@
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: "title"
             "description"
-            "details";
+            "details"
+            "video";
         grid-gap: 20px;
         flex-flow: column;
         padding: 20px;
@@ -22,7 +23,8 @@
         @include mediumScreen {
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas: "title title title"
-                "description description details";
+                "description description details"
+                "description description video";
         }
 
         .talent-name {
@@ -84,6 +86,13 @@
                     }
                 }
             }
+        }
+
+        .talent-video {
+            display: none;
+            /*display: flex;*/
+            justify-content: center;
+            grid-area: video;
         }
     }
 

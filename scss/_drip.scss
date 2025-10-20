@@ -12,7 +12,8 @@
     }
 
     .drip-images {
-        display: /*grid*/none;
+        /*display: grid;*/
+        display: none;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 10px;
 
