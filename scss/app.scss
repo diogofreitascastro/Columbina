@@ -7,6 +7,7 @@
 @import "drip";
 @import "base-stats";
 @import "prefarm";
+@import "filters";
 @import "talents";
 
 /* FONTFACE */
@@ -80,6 +81,9 @@ header {
             font-size: 1.2em;
         }
     }
+}
+.hide {
+    display: none;
 }
 
 main {

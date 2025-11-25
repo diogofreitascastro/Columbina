@@ -69,4 +69,33 @@ $(document).ready(function () {
 
     window.addEventListener('scroll', onScroll, { passive: true });
   })();
+
+  $('.filters li').click(function () {
+
+    // Remove active from all filters
+    $('.filters li').removeClass('active-filter');
+
+    // Activate clicked filter
+    $(this).addClass('active-filter');
+
+    // Hide all sections
+    $('.talents-megawrapper, .passives-megawrapper, .constellations-megawrapper').addClass('hide');
+
+    // Show selected section
+    if ($(this).hasClass('talents-filter')) {
+      $('.talents-megawrapper').removeClass('hide');
+    }
+    if ($(this).hasClass('passives-filter')) {
+      $('.passives-megawrapper').removeClass('hide');
+    }
+    if ($(this).hasClass('constellations-filter')) {
+      $('.constellations-megawrapper').removeClass('hide');
+    }
+  });
+
+  // Default active tab on page load
+  $(document).ready(function () {
+    $('.talents-filter').click();
+  });
 });
+
