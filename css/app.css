@@ -93,7 +93,12 @@ header .audio-wrapper audio::-webkit-media-controls-panel { background-color: #f
 .prefarm-wrapper .character-materials-wrapper .item-image, .prefarm-wrapper .signature-materials-wrapper .item-image { display: flex; align-items: center; justify-content: center; margin-bottom: 30px; }
 .prefarm-wrapper .character-materials-wrapper .item-image img, .prefarm-wrapper .signature-materials-wrapper .item-image img { max-height: 150px; }
 @media (min-width: 992px) { .prefarm-wrapper .character-materials-wrapper .item-image img, .prefarm-wrapper .signature-materials-wrapper .item-image img { max-height: 200px; } }
-.prefarm-wrapper .character-materials-wrapper p#signature-description, .prefarm-wrapper .signature-materials-wrapper p#signature-description { margin-bottom: 30px; font-size: 0.8em; }
+.prefarm-wrapper .character-materials-wrapper .signature-stats, .prefarm-wrapper .signature-materials-wrapper .signature-stats { display: flex; justify-content: space-around; font-size: 1.2em; margin-bottom: 10px; }
+@media (min-width: 992px) { .prefarm-wrapper .character-materials-wrapper .signature-stats, .prefarm-wrapper .signature-materials-wrapper .signature-stats { font-size: 2em; } }
+.prefarm-wrapper .character-materials-wrapper ul.signature-description, .prefarm-wrapper .signature-materials-wrapper ul.signature-description { margin-bottom: 30px; font-size: 0.8em; line-height: 1.5em; list-style-position: inside; }
+.prefarm-wrapper .character-materials-wrapper ul.signature-description li:not(:last-child), .prefarm-wrapper .signature-materials-wrapper ul.signature-description li:not(:last-child) { margin-bottom: 5px; }
+.prefarm-wrapper .character-materials-wrapper ul.signature-description li:not(:last-child) ul, .prefarm-wrapper .signature-materials-wrapper ul.signature-description li:not(:last-child) ul { list-style-position: inside; }
+.prefarm-wrapper .character-materials-wrapper ul.signature-description li:not(:last-child) ul li, .prefarm-wrapper .signature-materials-wrapper ul.signature-description li:not(:last-child) ul li { text-indent: 10px; margin-bottom: 0; }
 .prefarm-wrapper .character-materials-wrapper .materials-wrapper, .prefarm-wrapper .signature-materials-wrapper .materials-wrapper { display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 10px; }
 @media (min-width: 768px) { .prefarm-wrapper .character-materials-wrapper .materials-wrapper, .prefarm-wrapper .signature-materials-wrapper .materials-wrapper { grid-template-columns: repeat(5, 1fr); } }
 .prefarm-wrapper .character-materials-wrapper .materials-wrapper .individual-material, .prefarm-wrapper .signature-materials-wrapper .materials-wrapper .individual-material { height: 80px; border-radius: 10px; display: flex; flex-flow: column; }

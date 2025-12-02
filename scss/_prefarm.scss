@@ -32,9 +32,35 @@
             }
         }
 
-        p#signature-description {
+        .signature-stats {
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+
+            @include largeScreen {
+                font-size: 2em;
+            }
+        }
+
+        ul.signature-description {
             margin-bottom: 30px;
             font-size: 0.8em;
+            line-height: 1.5em;
+            list-style-position: inside;
+
+            li:not(:last-child) {
+                margin-bottom: 5px;
+
+                ul {
+                    list-style-position: inside;
+
+                    li {
+                        text-indent: 10px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
         }
 
         .materials-wrapper {
