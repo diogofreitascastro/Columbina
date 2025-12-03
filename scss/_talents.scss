@@ -16,15 +16,15 @@
             "description"
             "details"
             "video";
-        grid-gap: 20px;
+        grid-gap: 20px 40px;
         flex-flow: column;
         padding: 20px;
 
         @include mediumScreen {
             grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: "title title title"
+            grid-template-areas: "title title details"
                 "description description details"
-                "description description video";
+                /*"description description video"*/;
         }
 
         .talent-name {
@@ -78,11 +78,12 @@
 
                     &.MV-name {
                         text-align: left;
-                        max-width: 70%;
+                        max-width: 65%;
                     }
 
                     &.MV-number {
                         text-align: right;
+                        max-width: 30%;
                     }
                 }
             }
