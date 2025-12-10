@@ -68,9 +68,11 @@ header .audio-wrapper audio::-webkit-media-controls-panel { background-color: #f
 .drip-wrapper { grid-gap: 30px; margin: 20px 0 30px; }
 @media (min-width: 768px) { .drip-wrapper { grid-gap: 60px; } }
 .drip-wrapper h2 { text-align: left; margin-bottom: 30px; }
-.drip-wrapper .drip-images { /*display: grid;*/ display: none; grid-template-columns: repeat(1, 1fr); grid-gap: 10px; }
-@media (min-width: 768px) { .drip-wrapper .drip-images { grid-template-columns: repeat(3, 1fr); grid-gap: 60px; } }
+.drip-wrapper .drip-images { display: flex; grid-gap: 10px; justify-content: center; align-items: center; }
+@media (min-width: 768px) { .drip-wrapper .drip-images { grid-gap: 60px; } }
 .drip-wrapper .drip-images > * { display: flex; justify-content: center; }
+.drip-wrapper .drip-images div img { max-width: 100%; height: auto; }
+@media (min-width: 768px) { .drip-wrapper .drip-images div img { max-height: 300px; } }
 
 .ascension-wrapper { display: grid; grid-template-columns: repeat(1, 1fr); grid-template-areas: "gacha" "namecard" "stats"; grid-gap: 20px; margin: 20px 0 30px; }
 @media (min-width: 768px) { .ascension-wrapper { grid-template-columns: repeat(2, 1fr); grid-template-areas: "gacha stats" "namecard stats"; grid-gap: 20px 60px; } }

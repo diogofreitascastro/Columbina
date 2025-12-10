@@ -12,19 +12,28 @@
     }
 
     .drip-images {
-        /*display: grid;*/
-        display: none;
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
         grid-gap: 10px;
+        justify-content: center;
+        align-items: center;
 
         @include mediumScreen {
-            grid-template-columns: repeat(3, 1fr);
             grid-gap: 60px;
         }
 
         >* {
             display: flex;
             justify-content: center;
+        }
+
+        div {
+            img {
+                max-width: 100%;
+                height: auto;
+                @include mediumScreen {
+                    max-height: 300px;
+                }
+            }
         }
     }
 }
