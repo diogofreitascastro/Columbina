@@ -68,9 +68,12 @@ header .audio-wrapper audio::-webkit-media-controls-panel { background-color: #f
 .drip-wrapper { grid-gap: 30px; margin: 20px 0 30px; }
 @media (min-width: 768px) { .drip-wrapper { grid-gap: 60px; } }
 .drip-wrapper h2 { text-align: left; margin-bottom: 30px; }
-.drip-wrapper .drip-images { display: flex; grid-gap: 10px; justify-content: center; align-items: center; }
-@media (min-width: 768px) { .drip-wrapper .drip-images { grid-gap: 60px; } }
-.drip-wrapper .drip-images > * { display: flex; justify-content: center; }
+.drip-wrapper .drip-images { display: grid; grid-gap: 10px; grid-template-columns: repeat(4, 1fr); grid-template-areas: "vertical square square video"; }
+@media (min-width: 768px) { .drip-wrapper .drip-images { grid-gap: 60px; display: flex; align-items: center; justify-content: center; } }
+.drip-wrapper .drip-images #vertical-drip { grid-area: vertical; }
+.drip-wrapper .drip-images #square-drip { grid-area: square; }
+.drip-wrapper .drip-images #video-drip { grid-area: video; }
+.drip-wrapper .drip-images > * { display: flex; justify-content: center; align-items: center; }
 .drip-wrapper .drip-images div img { max-width: 100%; height: auto; }
 @media (min-width: 768px) { .drip-wrapper .drip-images div img { max-height: 300px; } }
 
