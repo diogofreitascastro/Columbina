@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     if (distance < 0) {
       clearInterval(x1);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
+      document.getElementById("countdown").innerHTML = "0d 0h 0m 0s";
     }
   }, 1000);
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     if (distance < 0) {
       clearInterval(x2);
-      document.getElementById("countdown-drip").innerHTML = "EXPIRED";
+      document.getElementById("countdown-drip").innerHTML = "0d 0h 0m 0s";
     }
   }, 1000);
 
